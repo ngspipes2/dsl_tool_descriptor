@@ -4,7 +4,7 @@ public interface IParameterDescriptor {
 
     String getName();
     String getDescription();
-    String getValue();
+    String getValues();
     String getType();
     boolean isRequired();
     String getPrefix();
@@ -12,5 +12,5 @@ public interface IParameterDescriptor {
     String getSeparator();
     String getDependent();
     String getDependentValue();
-    IParameterDescriptor getSubArguments();
+    IParameterDescriptor getParameters();
 }

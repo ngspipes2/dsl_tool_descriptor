@@ -8,5 +8,4 @@ public interface IToolDescriptor {
     String getVersion();
     String[] getDocumentation();
     ICommandDescriptor[] getCommands();
-
 }

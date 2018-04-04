@@ -7,6 +7,6 @@ public interface ICommandDescriptor {
     int getRecomendedMemory();
     int getRecomendedDisk();
     int getRecomendedCpu();
-    IParameterDescriptor[] getPrameters();
+    IParameterDescriptor[] getParameters();
     IOutputDescriptor[] getOutputs();
 }
