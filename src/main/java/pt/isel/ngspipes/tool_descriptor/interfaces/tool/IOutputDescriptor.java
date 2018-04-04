@@ -1,6 +1,6 @@
 package pt.isel.ngspipes.tool_descriptor.interfaces.tool;
 
-public class IOutputDescriptor {
+public interface IOutputDescriptor {
 
     String getName();
     String getDescription();
