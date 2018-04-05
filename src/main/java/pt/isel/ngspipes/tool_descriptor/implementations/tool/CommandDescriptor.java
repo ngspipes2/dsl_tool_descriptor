@@ -4,6 +4,8 @@ import pt.isel.ngspipes.tool_descriptor.interfaces.tool.ICommandDescriptor;
 import pt.isel.ngspipes.tool_descriptor.interfaces.tool.IOutputDescriptor;
 import pt.isel.ngspipes.tool_descriptor.interfaces.tool.IParameterDescriptor;
 
+import java.util.Collection;
+
 public class CommandDescriptor implements ICommandDescriptor {
 
     private String name;
@@ -11,8 +13,8 @@ public class CommandDescriptor implements ICommandDescriptor {
     private int recomendedMemory;
     private int recomendedDisk;
     private int recomendedCpu;
-    private IParameterDescriptor[] parameters;
-    private IOutputDescriptor[] outputs;
+    private Collection<IParameterDescriptor> parameters;
+    private Collection<IOutputDescriptor> outputs;
 
     @Override
     public String getName() { return name; }
@@ -30,10 +32,10 @@ public class CommandDescriptor implements ICommandDescriptor {
     public int getRecomendedCpu() { return recomendedCpu; }
 
     @Override
-    public IParameterDescriptor[] getParameters() { return parameters; }
+    public Collection<IParameterDescriptor> getParameters() { return parameters; }
 
     @Override
-    public IOutputDescriptor[] getOutputs() { return outputs; }
+    public Collection<IOutputDescriptor> getOutputs() { return outputs; }
 
 
     public void setName(String name) { this.name = name; }
@@ -41,7 +43,7 @@ public class CommandDescriptor implements ICommandDescriptor {
     public void setRecomendedMemory(int recomendedMemory) { this.recomendedMemory = recomendedMemory; }
     public void setRecomendedDisk(int recomendedDisk) { this.recomendedDisk = recomendedDisk; }
     public void setRecomendedCpu(int recomendedCpu) { this.recomendedCpu = recomendedCpu; }
-    public void setParameters(IParameterDescriptor[] parameters) { this.parameters = parameters; }
-    public void setOutputs(IOutputDescriptor[] outputs) { this.outputs = outputs; }
+    public void setParameters(Collection<IParameterDescriptor> parameters) { this.parameters = parameters; }
+    public void setOutputs(Collection<IOutputDescriptor> outputs) { this.outputs = outputs; }
 
 }

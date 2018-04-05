@@ -2,6 +2,8 @@ package pt.isel.ngspipes.tool_descriptor.implementations.tool;
 
 import pt.isel.ngspipes.tool_descriptor.interfaces.tool.IParameterDescriptor;
 
+import java.util.Collection;
+
 import static java.io.File.separator;
 
 public class ParameterDescriptor implements IParameterDescriptor {
@@ -15,7 +17,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     private String suffix;
     private String dependent;
     private String dependentValue;
-    private IParameterDescriptor subparameters;
+    private Collection<IParameterDescriptor> subParameters;
 
     @Override
     public String getName() { return name; }
@@ -48,7 +50,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public String getDependentValue() { return dependentValue; }
 
     @Override
-    public IParameterDescriptor getParameters() { return subparameters; }
+    public Collection<IParameterDescriptor> getParameters() { return subParameters; }
 
     public void setName(String name) { this.name = name; }
     public void setDescription(String description) { this.description = description; }
@@ -59,6 +61,6 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public void setSuffix(String suffix) { this.suffix = suffix; }
     public void setDependent(String dependent) { this.dependent = dependent; }
     public void setDependentValue(String dependentValue) { this.dependentValue = dependentValue; }
-    public void setSubparameters(IParameterDescriptor subparameters) { this.subparameters = subparameters; }
+    public void setSubparameters(Collection<IParameterDescriptor> subParameters) { this.subParameters = subParameters; }
 
 }

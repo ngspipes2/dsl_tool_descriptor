@@ -1,5 +1,7 @@
 package pt.isel.ngspipes.tool_descriptor.interfaces.tool;
 
+import java.util.Collection;
+
 public interface ICommandDescriptor {
 
     String getName();
@@ -7,6 +9,6 @@ public interface ICommandDescriptor {
     int getRecomendedMemory();
     int getRecomendedDisk();
     int getRecomendedCpu();
-    IParameterDescriptor[] getParameters();
-    IOutputDescriptor[] getOutputs();
+    Collection<IParameterDescriptor> getParameters();
+    Collection<IOutputDescriptor> getOutputs();
 }

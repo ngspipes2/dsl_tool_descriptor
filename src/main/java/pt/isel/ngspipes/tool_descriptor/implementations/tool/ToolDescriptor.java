@@ -3,14 +3,16 @@ package pt.isel.ngspipes.tool_descriptor.implementations.tool;
 import pt.isel.ngspipes.tool_descriptor.interfaces.tool.ICommandDescriptor;
 import pt.isel.ngspipes.tool_descriptor.interfaces.tool.IToolDescriptor;
 
+import java.util.Collection;
+
 public class ToolDescriptor implements IToolDescriptor {
 
     private String name;
     private String author;
     private String description;
     private String version;
-    private String[] documentation;
-    private ICommandDescriptor[] commands;
+    private Collection<String> documentation;
+    private Collection<ICommandDescriptor> commands;
 
 
     @Override
@@ -26,16 +28,16 @@ public class ToolDescriptor implements IToolDescriptor {
     public String getVersion() { return version; }
 
     @Override
-    public String[] getDocumentation() { return documentation; }
+    public Collection<String> getDocumentation() { return documentation; }
 
     @Override
-    public ICommandDescriptor[] getCommands() { return commands; }
+    public Collection<ICommandDescriptor> getCommands() { return commands; }
 
     public void setName(String name) { this.name = name; }
     public void setAuthor(String author) { this.author = author; }
     public void setDescription(String description) { this.description = description; }
     public void setVersion(String version) { this.version = version; }
-    public void setDocumentation(String[] documentation) { this.documentation = documentation; }
-    public void setCommands(ICommandDescriptor[] commands) { this.commands = commands; }
+    public void setDocumentation(Collection<String> documentation) { this.documentation = documentation; }
+    public void setCommands(Collection<ICommandDescriptor> commands) { this.commands = commands; }
 
 }

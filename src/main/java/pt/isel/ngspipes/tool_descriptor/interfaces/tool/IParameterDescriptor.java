@@ -1,5 +1,7 @@
 package pt.isel.ngspipes.tool_descriptor.interfaces.tool;
 
+import java.util.Collection;
+
 public interface IParameterDescriptor {
 
     String getName();
@@ -12,5 +14,5 @@ public interface IParameterDescriptor {
     String getSeparator();
     String getDependent();
     String getDependentValue();
-    IParameterDescriptor getParameters();
+    Collection<IParameterDescriptor> getParameters();
 }
