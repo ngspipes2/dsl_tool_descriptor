@@ -16,7 +16,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     private String prefix;
     private String suffix;
     private String dependent;
-    private String dependentValue;
+    private String [] dependentValues;
     private Collection<IParameterDescriptor> subParameters;
 
     @Override
@@ -47,7 +47,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public String getDependent() { return dependent; }
 
     @Override
-    public String getDependentValue() { return dependentValue; }
+    public String[] getDependentValues() { return dependentValues; }
 
     @Override
     public Collection<IParameterDescriptor> getParameters() { return subParameters; }
@@ -60,7 +60,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public void setPrefix(String prefix) { this.prefix = prefix; }
     public void setSuffix(String suffix) { this.suffix = suffix; }
     public void setDependent(String dependent) { this.dependent = dependent; }
-    public void setDependentValue(String dependentValue) { this.dependentValue = dependentValue; }
+    public void setDependentValue(String[] dependentValue) { this.dependentValues = dependentValue; }
     public void setSubparameters(Collection<IParameterDescriptor> subParameters) { this.subParameters = subParameters; }
 
 }

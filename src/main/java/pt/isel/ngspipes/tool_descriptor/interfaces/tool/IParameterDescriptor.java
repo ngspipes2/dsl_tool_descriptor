@@ -13,6 +13,6 @@ public interface IParameterDescriptor {
     String getSuffix();
     String getSeparator();
     String getDependent();
-    String getDependentValue();
+    String[] getDependentValues();
     Collection<IParameterDescriptor> getParameters();
 }
