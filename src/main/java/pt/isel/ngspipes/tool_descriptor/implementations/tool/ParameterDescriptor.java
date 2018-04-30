@@ -60,7 +60,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public void setPrefix(String prefix) { this.prefix = prefix; }
     public void setSuffix(String suffix) { this.suffix = suffix; }
     public void setDependent(String dependent) { this.dependent = dependent; }
-    public void setDependentValue(String[] dependentValue) { this.dependentValues = dependentValue; }
+    public void setDependentValues(String[] dependentValue) { this.dependentValues = dependentValue; }
     public void setSubparameters(Collection<IParameterDescriptor> subParameters) { this.subParameters = subParameters; }
 
 }

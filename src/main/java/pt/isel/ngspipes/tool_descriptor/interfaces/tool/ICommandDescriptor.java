@@ -5,10 +5,11 @@ import java.util.Collection;
 public interface ICommandDescriptor {
 
     String getName();
+    String getCommand();
     String getDescription();
-    int getRecomendedMemory();
-    int getRecomendedDisk();
-    int getRecomendedCpu();
+    int getRecommendedMemory();
+    int getRecommendedDisk();
+    int getRecommendedCpu();
     Collection<IParameterDescriptor> getParameters();
     Collection<IOutputDescriptor> getOutputs();
 }

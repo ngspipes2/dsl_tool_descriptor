@@ -1,8 +1,10 @@
 package pt.isel.ngspipes.tool_descriptor.interfaces.configurator;
 
-public interface IExecutionContext {
+import java.util.Map;
+
+public interface IExecutionContextDescriptor {
 
     String getName();
     String getContext();
-    IConfigurator getConfigurations();
+    Map<String, Object> getConfigurations();
 }

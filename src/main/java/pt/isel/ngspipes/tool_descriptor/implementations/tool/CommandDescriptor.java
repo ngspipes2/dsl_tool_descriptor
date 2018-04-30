@@ -10,26 +10,30 @@ public class CommandDescriptor implements ICommandDescriptor {
 
     private String name;
     private String description;
-    private int recomendedMemory;
-    private int recomendedDisk;
-    private int recomendedCpu;
+    private int recommendedMemory;
+    private int recommendedDisk;
+    private int recommendedCpu;
     private Collection<IParameterDescriptor> parameters;
     private Collection<IOutputDescriptor> outputs;
+    private String command;
 
     @Override
     public String getName() { return name; }
 
     @Override
+    public String getCommand() { return command; }
+
+    @Override
     public String getDescription() { return description; }
 
     @Override
-    public int getRecomendedMemory() { return recomendedMemory; }
+    public int getRecommendedMemory() { return recommendedMemory; }
 
     @Override
-    public int getRecomendedDisk() { return recomendedDisk; }
+    public int getRecommendedDisk() { return recommendedDisk; }
 
     @Override
-    public int getRecomendedCpu() { return recomendedCpu; }
+    public int getRecommendedCpu() { return recommendedCpu; }
 
     @Override
     public Collection<IParameterDescriptor> getParameters() { return parameters; }
@@ -39,10 +43,11 @@ public class CommandDescriptor implements ICommandDescriptor {
 
 
     public void setName(String name) { this.name = name; }
+    public void setCommand(String command) { this.command = command; }
     public void setDescription(String description) { this.description = description; }
-    public void setRecomendedMemory(int recomendedMemory) { this.recomendedMemory = recomendedMemory; }
-    public void setRecomendedDisk(int recomendedDisk) { this.recomendedDisk = recomendedDisk; }
-    public void setRecomendedCpu(int recomendedCpu) { this.recomendedCpu = recomendedCpu; }
+    public void setRecommendedMemory(int recommendedMemory) { this.recommendedMemory = recommendedMemory; }
+    public void setRecommendedDisk(int recommendedDisk) { this.recommendedDisk = recommendedDisk; }
+    public void setRecommendedCpu(int recommendedCpu) { this.recommendedCpu = recommendedCpu; }
     public void setParameters(Collection<IParameterDescriptor> parameters) { this.parameters = parameters; }
     public void setOutputs(Collection<IOutputDescriptor> outputs) { this.outputs = outputs; }
 
