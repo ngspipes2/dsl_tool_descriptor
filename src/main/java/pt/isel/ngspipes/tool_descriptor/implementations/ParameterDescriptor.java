@@ -10,13 +10,14 @@ public class ParameterDescriptor implements IParameterDescriptor {
 
     private String name;
     private String description;
-    private String value;
+    private String[] values;
     private String type;
     private boolean required;
     private String prefix;
     private String suffix;
-    private String dependent;
-    private String [] dependentValues;
+    private String separator;
+    private String depends;
+    private String[] dependentValues;
     private Collection<IParameterDescriptor> subParameters;
 
     @Override
@@ -26,7 +27,7 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public String getDescription() { return description; }
 
     @Override
-    public String getValues() { return value; }
+    public String[] getValues() { return values; }
 
     @Override
     public String getType() { return type; }
@@ -44,23 +45,24 @@ public class ParameterDescriptor implements IParameterDescriptor {
     public String getSeparator() { return separator; }
 
     @Override
-    public String getDependent() { return dependent; }
+    public String getDepends() { return depends; }
 
     @Override
     public String[] getDependentValues() { return dependentValues; }
 
     @Override
-    public Collection<IParameterDescriptor> getParameters() { return subParameters; }
+    public Collection<IParameterDescriptor> getSubParameters() { return subParameters; }
 
     public void setName(String name) { this.name = name; }
     public void setDescription(String description) { this.description = description; }
-    public void setValue(String value) { this.value = value; }
+    public void setValues(String[] values) { this.values = values; }
     public void setType(String type) { this.type = type; }
     public void setRequired(boolean required) { this.required = required; }
     public void setPrefix(String prefix) { this.prefix = prefix; }
     public void setSuffix(String suffix) { this.suffix = suffix; }
-    public void setDependent(String dependent) { this.dependent = dependent; }
+    public void setSeparator(String separator) { this.separator = separator; }
+    public void setDepends(String depends) { this.depends = depends; }
     public void setDependentValues(String[] dependentValue) { this.dependentValues = dependentValue; }
-    public void setSubparameters(Collection<IParameterDescriptor> subParameters) { this.subParameters = subParameters; }
+    public void setSubParameters(Collection<IParameterDescriptor> subParameters) { this.subParameters = subParameters; }
 
 }

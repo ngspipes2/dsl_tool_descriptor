@@ -6,13 +6,13 @@ public interface IParameterDescriptor {
 
     String getName();
     String getDescription();
-    String getValues();
+    String[] getValues();
     String getType();
     boolean isRequired();
     String getPrefix();
     String getSuffix();
     String getSeparator();
-    String getDependent();
+    String getDepends();
     String[] getDependentValues();
-    Collection<IParameterDescriptor> getParameters();
+    Collection<IParameterDescriptor> getSubParameters();
 }
