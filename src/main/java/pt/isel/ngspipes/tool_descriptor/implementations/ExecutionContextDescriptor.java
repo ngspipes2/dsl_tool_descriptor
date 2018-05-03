@@ -1,10 +1,10 @@
-package pt.isel.ngspipes.tool_descriptor.implementations.execution_context;
+package pt.isel.ngspipes.tool_descriptor.implementations;
 
-import pt.isel.ngspipes.tool_descriptor.interfaces.configurator.IExecutionContextDescriptor;
+import pt.isel.ngspipes.tool_descriptor.interfaces.IExecutionContextDescriptor;
 
 import java.util.Map;
 
-public class ContainerExecutionContextDescriptor implements IExecutionContextDescriptor {
+public class ExecutionContextDescriptor implements IExecutionContextDescriptor {
 
     protected String name;
     protected String context;

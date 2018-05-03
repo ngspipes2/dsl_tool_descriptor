@@ -1,4 +1,4 @@
-package pt.isel.ngspipes.tool_descriptor.interfaces.tool;
+package pt.isel.ngspipes.tool_descriptor.interfaces;
 
 import java.util.Collection;
 

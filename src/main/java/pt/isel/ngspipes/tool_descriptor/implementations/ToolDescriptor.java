@@ -1,8 +1,8 @@
-package pt.isel.ngspipes.tool_descriptor.implementations.tool;
+package pt.isel.ngspipes.tool_descriptor.implementations;
 
-import pt.isel.ngspipes.tool_descriptor.interfaces.configurator.IExecutionContextDescriptor;
-import pt.isel.ngspipes.tool_descriptor.interfaces.tool.ICommandDescriptor;
-import pt.isel.ngspipes.tool_descriptor.interfaces.tool.IToolDescriptor;
+import pt.isel.ngspipes.tool_descriptor.interfaces.IExecutionContextDescriptor;
+import pt.isel.ngspipes.tool_descriptor.interfaces.ICommandDescriptor;
+import pt.isel.ngspipes.tool_descriptor.interfaces.IToolDescriptor;
 
 import java.util.Collection;
 
@@ -15,17 +15,19 @@ public class ToolDescriptor implements IToolDescriptor {
     private Collection<String> documentation;
     private Collection<ICommandDescriptor> commands;
     private Collection<IExecutionContextDescriptor> executionContexts;
+    private String logo;
 
     public ToolDescriptor(String name, String author,
                           String description, String version,
                           Collection<String> documentation, Collection<ICommandDescriptor> commands,
-                          Collection<IExecutionContextDescriptor> executionContexts) {
+                          String logo, Collection<IExecutionContextDescriptor> executionContexts) {
         this.name = name;
         this.author = author;
         this.description = description;
         this.version = version;
         this.documentation = documentation;
         this.commands = commands;
+        this.logo = logo;
         this.executionContexts = executionContexts;
     }
 
@@ -44,6 +46,8 @@ public class ToolDescriptor implements IToolDescriptor {
     @Override
     public Collection<ICommandDescriptor> getCommands() { return commands; }
     @Override
+    public String getLogo() { return logo; }
+    @Override
     public Collection<IExecutionContextDescriptor> getExecutionContexts() { return executionContexts; }
 
     public void setName(String name) { this.name = name; }
@@ -52,6 +56,7 @@ public class ToolDescriptor implements IToolDescriptor {
     public void setVersion(String version) { this.version = version; }
     public void setDocumentation(Collection<String> documentation) { this.documentation = documentation; }
     public void setCommands(Collection<ICommandDescriptor> commands) { this.commands = commands; }
+    public void setLogo(String logo) { this.logo = logo; }
     public void setExecutionContexts(Collection<IExecutionContextDescriptor> executionContexts) { this.executionContexts = executionContexts; }
 
 }

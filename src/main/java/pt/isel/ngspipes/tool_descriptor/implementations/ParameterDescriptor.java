@@ -1,6 +1,6 @@
-package pt.isel.ngspipes.tool_descriptor.implementations.tool;
+package pt.isel.ngspipes.tool_descriptor.implementations;
 
-import pt.isel.ngspipes.tool_descriptor.interfaces.tool.IParameterDescriptor;
+import pt.isel.ngspipes.tool_descriptor.interfaces.IParameterDescriptor;
 
 import java.util.Collection;
 

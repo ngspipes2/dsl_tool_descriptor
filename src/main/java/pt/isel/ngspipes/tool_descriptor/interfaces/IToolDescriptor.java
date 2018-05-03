@@ -1,6 +1,4 @@
-package pt.isel.ngspipes.tool_descriptor.interfaces.tool;
-
-import pt.isel.ngspipes.tool_descriptor.interfaces.configurator.IExecutionContextDescriptor;
+package pt.isel.ngspipes.tool_descriptor.interfaces;
 
 import java.util.Collection;
 
@@ -13,5 +11,6 @@ public interface IToolDescriptor {
     Collection<String> getDocumentation();
     Collection<ICommandDescriptor> getCommands();
     Collection<IExecutionContextDescriptor> getExecutionContexts();
+    String getLogo();
 
 }

@@ -1,4 +1,4 @@
-package pt.isel.ngspipes.tool_descriptor.interfaces.tool;
+package pt.isel.ngspipes.tool_descriptor.interfaces;
 
 public interface IOutputDescriptor {
 

@@ -1,4 +1,4 @@
-package pt.isel.ngspipes.tool_descriptor.interfaces.configurator;
+package pt.isel.ngspipes.tool_descriptor.interfaces;
 
 import java.util.Map;
 
