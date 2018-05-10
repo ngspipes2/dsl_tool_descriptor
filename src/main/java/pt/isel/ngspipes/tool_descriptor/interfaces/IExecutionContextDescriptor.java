@@ -6,5 +6,5 @@ public interface IExecutionContextDescriptor {
 
     String getName();
     String getContext();
-    Map<String, Object> getConfigurations();
+    Map<String, Object> getConfig();
 }
