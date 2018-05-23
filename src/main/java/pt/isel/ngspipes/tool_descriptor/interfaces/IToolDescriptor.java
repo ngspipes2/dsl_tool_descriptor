@@ -11,6 +11,6 @@ public interface IToolDescriptor {
     Collection<String> getDocumentation();
     Collection<ICommandDescriptor> getCommands();
     Collection<IExecutionContextDescriptor> getExecutionContexts();
-    String getLogo();
+    byte[] getLogo();
 
 }

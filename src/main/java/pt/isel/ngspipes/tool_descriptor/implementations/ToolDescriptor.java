@@ -1,7 +1,7 @@
 package pt.isel.ngspipes.tool_descriptor.implementations;
 
-import pt.isel.ngspipes.tool_descriptor.interfaces.IExecutionContextDescriptor;
 import pt.isel.ngspipes.tool_descriptor.interfaces.ICommandDescriptor;
+import pt.isel.ngspipes.tool_descriptor.interfaces.IExecutionContextDescriptor;
 import pt.isel.ngspipes.tool_descriptor.interfaces.IToolDescriptor;
 
 import java.util.Collection;
@@ -15,12 +15,12 @@ public class ToolDescriptor implements IToolDescriptor {
     private Collection<String> documentation;
     private Collection<ICommandDescriptor> commands;
     private Collection<IExecutionContextDescriptor> executionContexts;
-    private String logo;
+    private byte[] logo;
 
     public ToolDescriptor(String name, String author,
                           String description, String version,
                           Collection<String> documentation, Collection<ICommandDescriptor> commands,
-                          String logo, Collection<IExecutionContextDescriptor> executionContexts) {
+                          byte[] logo, Collection<IExecutionContextDescriptor> executionContexts) {
         this.name = name;
         this.author = author;
         this.description = description;
@@ -46,7 +46,7 @@ public class ToolDescriptor implements IToolDescriptor {
     @Override
     public Collection<ICommandDescriptor> getCommands() { return commands; }
     @Override
-    public String getLogo() { return logo; }
+    public byte[] getLogo() { return logo; }
     @Override
     public Collection<IExecutionContextDescriptor> getExecutionContexts() { return executionContexts; }
 
@@ -56,7 +56,7 @@ public class ToolDescriptor implements IToolDescriptor {
     public void setVersion(String version) { this.version = version; }
     public void setDocumentation(Collection<String> documentation) { this.documentation = documentation; }
     public void setCommands(Collection<ICommandDescriptor> commands) { this.commands = commands; }
-    public void setLogo(String logo) { this.logo = logo; }
+    public void setLogo(byte[] logo) { this.logo = logo; }
     public void setExecutionContexts(Collection<IExecutionContextDescriptor> executionContexts) { this.executionContexts = executionContexts; }
 
 }
