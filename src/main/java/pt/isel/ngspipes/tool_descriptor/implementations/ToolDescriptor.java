@@ -36,27 +36,41 @@ public class ToolDescriptor implements IToolDescriptor {
     @Override
     public String getName() { return name; }
     @Override
+    public void setName(String name) { this.name = name; }
+
+    @Override
     public String getAuthor() { return author; }
+    @Override
+    public void setAuthor(String author) { this.author = author; }
+
     @Override
     public String getDescription() { return description; }
     @Override
+    public void setDescription(String description) { this.description = description; }
+
+    @Override
     public String getVersion() { return version; }
+    @Override
+    public void setVersion(String version) { this.version = version; }
+
     @Override
     public Collection<String> getDocumentation() { return documentation; }
     @Override
+    public void setDocumentation(Collection<String> documentation) { this.documentation = documentation; }
+
+    @Override
     public Collection<ICommandDescriptor> getCommands() { return commands; }
+    @Override
+    public void setCommands(Collection<ICommandDescriptor> commands) { this.commands = commands; }
+
     @Override
     public byte[] getLogo() { return logo; }
     @Override
-    public Collection<IExecutionContextDescriptor> getExecutionContexts() { return executionContexts; }
-
-    public void setName(String name) { this.name = name; }
-    public void setAuthor(String author) { this.author = author; }
-    public void setDescription(String description) { this.description = description; }
-    public void setVersion(String version) { this.version = version; }
-    public void setDocumentation(Collection<String> documentation) { this.documentation = documentation; }
-    public void setCommands(Collection<ICommandDescriptor> commands) { this.commands = commands; }
     public void setLogo(byte[] logo) { this.logo = logo; }
+
+    @Override
+    public Collection<IExecutionContextDescriptor> getExecutionContexts() { return executionContexts; }
+    @Override
     public void setExecutionContexts(Collection<IExecutionContextDescriptor> executionContexts) { this.executionContexts = executionContexts; }
 
 }

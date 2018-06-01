@@ -5,12 +5,26 @@ import java.util.Collection;
 public interface IToolDescriptor {
 
     String getName();
-    String getAuthor();
-    String getDescription();
-    String getVersion();
-    Collection<String> getDocumentation();
-    Collection<ICommandDescriptor> getCommands();
-    Collection<IExecutionContextDescriptor> getExecutionContexts();
-    byte[] getLogo();
+    void setName(String name);
 
+    String getAuthor();
+    void setAuthor(String author);
+
+    String getDescription();
+    void setDescription(String description);
+
+    String getVersion();
+    void setVersion(String version);
+
+    Collection<String> getDocumentation();
+    void setDocumentation(Collection<String> documentation);
+
+    Collection<ICommandDescriptor> getCommands();
+    void setCommands(Collection<ICommandDescriptor> commands);
+
+    byte[] getLogo();
+    void setLogo(byte[] logo);
+
+    Collection<IExecutionContextDescriptor> getExecutionContexts();
+    void setExecutionContexts(Collection<IExecutionContextDescriptor> executionContexts);
 }

@@ -11,19 +11,22 @@ public class OutputDescriptor implements IOutputDescriptor {
 
     @Override
     public String getName() { return name; }
+    @Override
+    public void setName(String name) { this.name = name; }
 
     @Override
     public String getDescription() { return description; }
+    @Override
+    public void setDescription(String description) { this.description = description; }
 
     @Override
     public String getValue() { return value; }
+    @Override
+    public void setValue(String value) { this.value = value; }
 
     @Override
     public String getType() { return type; }
-
+    @Override
     public void setType(String type) { this.type = type; }
-    public void setName(String name) { this.name = name; }
-    public void setDescription(String description) { this.description = description; }
-    public void setValue(String value) { this.value = value; }
 
 }

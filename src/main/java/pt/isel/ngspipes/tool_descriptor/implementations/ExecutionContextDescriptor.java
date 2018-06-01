@@ -13,12 +13,16 @@ public class ExecutionContextDescriptor implements IExecutionContextDescriptor {
     @Override
     public String getName() { return name; }
     @Override
+    public void setName(String name) { this.name = name; }
+
+    @Override
     public String getContext() { return context; }
     @Override
-    public Map<String, Object> getConfig() { return config; }
-
-    public void setName(String name) { this.name = name; }
     public void setContext(String context) { this.context = context; }
+
+    @Override
+    public Map<String, Object> getConfig() { return config; }
+    @Override
     public void setConfig(Map<String, Object> config) { this.config = config; }
 
 }
