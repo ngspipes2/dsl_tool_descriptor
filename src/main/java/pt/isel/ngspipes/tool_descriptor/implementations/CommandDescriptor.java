@@ -17,6 +17,21 @@ public class CommandDescriptor implements ICommandDescriptor {
     private Collection<IOutputDescriptor> outputs;
     private String command;
 
+
+    public CommandDescriptor(String name, String description, int recommendedMemory, int recommendedDisk, int recommendedCpu, Collection<IParameterDescriptor> parameters, Collection<IOutputDescriptor> outputs, String command) {
+        this.name = name;
+        this.description = description;
+        this.recommendedMemory = recommendedMemory;
+        this.recommendedDisk = recommendedDisk;
+        this.recommendedCpu = recommendedCpu;
+        this.parameters = parameters;
+        this.outputs = outputs;
+        this.command = command;
+    }
+
+    public CommandDescriptor() { }
+
+
     @Override
     public String getName() { return name; }
     @Override

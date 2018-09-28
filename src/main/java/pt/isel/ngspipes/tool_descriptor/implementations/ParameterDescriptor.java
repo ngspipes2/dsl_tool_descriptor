@@ -4,8 +4,6 @@ import pt.isel.ngspipes.tool_descriptor.interfaces.IParameterDescriptor;
 
 import java.util.Collection;
 
-import static java.io.File.separator;
-
 public class ParameterDescriptor implements IParameterDescriptor {
 
     private String name;
@@ -19,6 +17,24 @@ public class ParameterDescriptor implements IParameterDescriptor {
     private String depends;
     private Collection<String> dependentValues;
     private Collection<IParameterDescriptor> subParameters;
+
+
+    public ParameterDescriptor(String name, String description, Collection<String> values, String type, boolean required, String prefix, String suffix, String separator, String depends, Collection<String> dependentValues, Collection<IParameterDescriptor> subParameters) {
+        this.name = name;
+        this.description = description;
+        this.values = values;
+        this.type = type;
+        this.required = required;
+        this.prefix = prefix;
+        this.suffix = suffix;
+        this.separator = separator;
+        this.depends = depends;
+        this.dependentValues = dependentValues;
+        this.subParameters = subParameters;
+    }
+
+    public ParameterDescriptor() { }
+
 
     @Override
     public String getName() { return name; }

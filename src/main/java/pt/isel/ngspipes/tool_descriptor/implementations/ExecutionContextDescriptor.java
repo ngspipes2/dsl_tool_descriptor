@@ -10,6 +10,16 @@ public class ExecutionContextDescriptor implements IExecutionContextDescriptor {
     protected String context;
     protected Map<String, Object> config;
 
+
+    public ExecutionContextDescriptor(String name, String context, Map<String, Object> config) {
+        this.name = name;
+        this.context = context;
+        this.config = config;
+    }
+
+    public ExecutionContextDescriptor() { }
+
+
     @Override
     public String getName() { return name; }
     @Override

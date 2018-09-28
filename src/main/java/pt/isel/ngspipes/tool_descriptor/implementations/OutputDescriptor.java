@@ -9,6 +9,18 @@ public class OutputDescriptor implements IOutputDescriptor {
     private String description;
     private String value;
 
+
+    public OutputDescriptor(String type, String name, String description, String value) {
+        this.type = type;
+        this.name = name;
+        this.description = description;
+        this.value = value;
+    }
+
+    public OutputDescriptor() { }
+
+
+
     @Override
     public String getName() { return name; }
     @Override
